@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/worker-application" element={<WorkerApplication />} />
           <Route path="/worker-profile" element={<WorkerProfile />} />
+          <Route path="/worker-profile" element={<Suspense fallback={<div>Loading...</div>}><WorkerProfile /></Suspense>} />
           <Route path="/worker/:workerId" element={<WorkerDetail />} />
           <Route path="/booking/:workerId" element={<Booking />} />
           <Route path="/booking/:id" element={<BookingDetail />} />
