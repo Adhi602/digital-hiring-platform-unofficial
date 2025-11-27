@@ -120,7 +120,7 @@ export const WorkerCard = ({ worker }: WorkerCardProps) => {
       <div className="flex gap-2">
         <Button 
           className="flex-1" 
-          onClick={() => navigate(`/worker/${worker.id}`)}
+          onClick={() => navigate("/worker-profile")}
         >
           View Profile
         </Button>
