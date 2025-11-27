@@ -211,7 +211,7 @@ const Dashboard = () => {
                 <p className="text-muted-foreground mb-6">
                   Manage your profile and availability
                 </p>
-                <Button onClick={() => navigate("/worker-profile")}>
+                <Button onClick={() => navigate(`/worker/${worker.id}`)}>
                   View My Profile
                 </Button>
               </div>
