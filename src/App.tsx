@@ -28,7 +28,20 @@ const App = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/worker-application" element={<WorkerApplication />} />
-            <Route path="/worker-profile" element={<WorkerProfile />} />
+            // Replace the /worker-profile route temporarily with a minimal test render:
+            <Route
+              path="/worker-profile"
+              element={
+                // TEMP: simple test component to verify routing / rendering works
+                <div style={{ padding: 24 }}>
+                  <h1>WORKER PROFILE TEST</h1>
+                  <p>If you see this, routing works and WorkerProfile likely throws at runtime.</p>
+                </div>
+              }
+            />
+            
+            // (comment out or remove the original import/element for WorkerProfile while testing)
+            // <Route path="/worker-profile" element={<WorkerProfile />} />
             <Route path="/worker/:workerId" element={<WorkerDetail />} />
             <Route path="/booking/:workerId" element={<Booking />} />
             <Route path="/booking/:id" element={<BookingDetail />} />
