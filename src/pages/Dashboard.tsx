@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -211,9 +211,30 @@ const Dashboard = () => {
                 <p className="text-muted-foreground mb-6">
                   Manage your profile and availability
                 </p>
-                <Button onClick={() => navigate("/worker-profile")}>
+
+                {/* Debug-friendly button: logs click, tries navigate, falls back to full page load */}
+                <Button
+                  onClick={() => {
+                    console.log("View Profile button clicked");
+                    try {
+                      navigate("/worker-profile");
+                    } catch (err) {
+                      console.error("navigate() threw:", err);
+                      // fallback to a hard navigation if react-router isn't mounted for some reason
+                      window.location.href = "/worker-profile";
+                    }
+                  }}
+                  data-testid="view-profile-btn"
+                >
                   View My Profile
                 </Button>
+
+                {/* A direct Link fallback to verify react-router Link works */}
+                <div className="mt-4">
+                  <Link to="/worker-profile" data-testid="view-profile-link" className="text-primary underline">
+                    Open profile via Link
+                  </Link>
+                </div>
               </div>
             </TabsContent>
           </Tabs>
