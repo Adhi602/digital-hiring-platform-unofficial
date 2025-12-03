@@ -10,6 +10,7 @@ import WorkerApplication from "./pages/WorkerApplication";
 import WorkerDetail from "./pages/WorkerDetail";
 import WorkerProfile from "@/pages/WorkerProfile";
 import Booking from "./pages/Booking";
+import BookingDetail from "./pages/BookingDetail";
 import BookingDetails from "./pages/BookingDetails";
 import DirectChatPage from "./pages/DirectChatPage";
 import NotFound from "./pages/NotFound";
