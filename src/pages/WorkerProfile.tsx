@@ -266,7 +266,7 @@ const WorkerProfile = () => {
               <div className="mb-4">
                 <h4 className="text-md font-semibold mb-2">Contact Information</h4>
                 <div className="space-y-2">
-                  {workerProfile.user.phone ? (
+                  {workerProfile.user?.phone ? (
                     <div className="flex items-center gap-2 text-sm">
                       <Phone className="h-4 w-4 text-primary" />
                       <span>{workerProfile.user.phone}</span>
@@ -274,7 +274,7 @@ const WorkerProfile = () => {
                   ) : (
                     <div className="text-sm text-muted-foreground">Phone not provided</div>
                   )}
-                  {workerProfile.user.email ? (
+                  {workerProfile.user?.email ? (
                     <div className="flex items-center gap-2 text-sm">
                       <span className="font-medium">📧</span>
                       <span>{workerProfile.user.email}</span>
