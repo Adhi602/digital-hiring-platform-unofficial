@@ -228,13 +228,6 @@ const Dashboard = () => {
                 >
                   View My Profile
                 </Button>
-
-                {/* A direct Link fallback to verify react-router Link works */}
-                <div className="mt-4">
-                  <Link to="/worker-profile" data-testid="view-profile-link" className="text-primary underline">
-                    Open profile via Link
-                  </Link>
-                </div>
               </div>
             </TabsContent>
           </Tabs>
